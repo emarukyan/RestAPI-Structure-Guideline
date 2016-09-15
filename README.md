@@ -11,13 +11,23 @@ Guideline for creating REST API endpoints.
 # API Authentication
 - AuthKey Token as a request header.
 
-POST /v1/auth/token
+POST /auth/signup  - new admin user
+GET /auth/verifyemail/:verifcode  - activate account
 
-POST /v1/auth/passresetcode
+POST /auth/signin  - login user (all types)
+  response
+  HEADERS: Set-Cookie: 'AuthKey=asdkljqldalskdjasd'
+  {status: 'ok', AuthKey: 'asdkljqldalskdjasd'}
 
-POST /v1/auth/passreset
+GET /auth/signout - logout user
+  HEADERS: x-AuthKey: 'asdkljqldalskdjasd'
 
-POST /v1/auth/verifyemail
+POST /auth/passrecovery - send pass recovery email
+GET /auth/passrecovery/:chPassReqVerifCode - show form ({status: true, verifCode})
+POST /auth/restpass (verifCode, new password) - rest pass
+
+/users/current - GET (current logged in user info)
+
 
 API endpoints
 /v1/users - POST
