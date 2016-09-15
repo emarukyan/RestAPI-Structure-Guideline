@@ -15,6 +15,7 @@ POST /auth/signup  - new admin user
 
 GET /auth/verifyemail/:verifcode  - activate account
 
+
 POST /auth/signin  - login user (all types)
 
   response
@@ -22,6 +23,7 @@ POST /auth/signin  - login user (all types)
   HEADERS: Set-Cookie: 'AuthKey=asdkljqldalskdjasd'
 
   {status: 'ok', AuthKey: 'asdkljqldalskdjasd'}
+
 
 GET /auth/signout - logout user
 
@@ -31,8 +33,9 @@ POST /auth/passrecovery - send pass recovery email
 
 GET /auth/passrecovery/:chPassReqVerifCode - show form ({status: true, verifCode})
 
+
 POST /auth/restpass (verifCode, new password) - rest pass
-#/users/current - GET (current logged in user info)
+/users/current - GET (current logged in user info)
 
 
 ## API endpoints
