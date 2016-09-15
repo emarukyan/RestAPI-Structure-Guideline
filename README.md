@@ -9,7 +9,6 @@ Guideline for creating REST API endpoints.
 * In case query string params contain ?_method=DELETE, use method DELETE.
 
 # API Authentication
-- Session cookie for web.
 - AuthKey Token as a request header.
 
 POST /v1/auth/token
@@ -33,6 +32,10 @@ API endpoints
 GET /v1/dog/13123
 
 POST /v1/dog/register
+
+## ALL API GET endpoints should handle these params
+?page=nnnn
+
 
 ## Response Codes
 
