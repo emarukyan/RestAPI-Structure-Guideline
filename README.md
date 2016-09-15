@@ -32,11 +32,10 @@ POST /auth/passrecovery - send pass recovery email
 GET /auth/passrecovery/:chPassReqVerifCode - show form ({status: true, verifCode})
 
 POST /auth/restpass (verifCode, new password) - rest pass
+#/users/current - GET (current logged in user info)
 
-/users/current - GET (current logged in user info)
 
-
-API endpoints.
+## API endpoints
 /v1/users - POST
 
 /v1/users/2222 - PUT, DELETE, GET
