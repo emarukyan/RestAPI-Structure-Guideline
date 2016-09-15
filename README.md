@@ -20,18 +20,18 @@ POST /v1/auth/passreset
 POST /v1/auth/verifyemail
 
 API endpoints
-/v1/user - POST
+/v1/users - POST
 
-/v1/user/2222 - PUT, DELETE, GET
+/v1/users/2222 - PUT, DELETE, GET
 
 ## All API GET endpoints should implement COUNT, number of items.
-/v1/user/count
+/v1/users/count
 
 # API resources - nouns, actions - verbs
 
-GET /v1/dog/13123
+GET /v1/dogs/13123
 
-POST /v1/dog/register
+POST /v1/dogs/register
 
 ## ALL API GET endpoints should handle these params
 ?page=nnnn
